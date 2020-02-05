@@ -26,6 +26,10 @@ app.controller('profilesControllerExtension', function($scope, $controller, $roo
         //This is where you can modify your query parameters.    
         //query.is_active = 1;
         //return query;
+        if($rootScope.currentUser.role !== 'admin')
+        {
+            query.user_id=$rootScope.currentUser.id;
+        }
     };
 
     //This function is called when you are in list mode. i.e. after a call has returned from one of your API that returns a the paginated list of all objects matching your API.
@@ -72,9 +76,9 @@ app.controller('profilesControllerExtension', function($scope, $controller, $roo
     // }
 
     // If you want don't want to display certain columns in the list view you can remove them by defining the function below.
-    // $scope.removeListHeaders = function(){
-    //     return ['is_active'];
-    // }
+     $scope.removeListHeaders = function(){
+        return ['Id','Theme Bg','Theme Col','Is Deleted'];
+ }
 
     // If you want to refresh the data loaded in grid, you can call the following method
     // $scope.refreshData();

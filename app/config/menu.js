@@ -17,6 +17,7 @@ function RegisterMenuItems(){
         	    {action: 'tasks', icon: 'assignment_turned_in', color: 'green', text: 'Tasks'},
         	    {action: 'search', icon: 'search', color: 'brown', text: 'Search'},
                 {action: 'profiles', icon: 'person', color: 'green', text: 'Profile'},
+                {action: 'myprofile', icon: 'person', color: 'green', text: 'My Profile'},
                 {action: 'reports', icon: 'pie_chart', color: 'purple', text: 'Reports',
         	    	items: [
         	    			{action: 'reports/1', icon: 'pie_chart', color: 'red', text: 'Sample Report #1'},
